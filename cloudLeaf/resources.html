@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>资源平台</title>
+		<link rel="stylesheet" href="lib/common.css" />
+		<link rel="stylesheet" href="css/resources.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="header"></div>
+			<div class="middle">
+				<div class="tabs">
+					<ul class="tabs-list clearfix">
+						<li id="mechano-electronic">
+							<h2>机械电子</h2>
+							<p>mechano electronic</p>
+							<p id="start-date-1">8月1日12:00开拍</p>
+						</li>
+						<li id="bioengineering">
+							<h2>生物工程</h2>
+							<p>bioengineering</p>
+							<p id="start-date-2">8月1日12:00开拍</p>
+						</li>
+						<li id="energy-environment">
+							<h2>能源环境</h2>
+							<p>energy environment</p>
+							<p id="start-date-3">8月1日12:00开拍</p>
+						</li>
+						<li id="chemistry-chemical">
+							<h2>化学化工</h2>
+							<p>chemistry chemical</p>
+							<p id="start-date-4">8月1日12:00开拍</p>
+						</li>
+						<li id="slide-block"></li>
+					</ul>
+				</div>
+				<div class="content-show">
+					<div class="mechano-electronic">
+						<ul class="product-list clearfix">
+							<li>
+								<div class="contain-img">
+									<img src="images/sources.png" />
+									<p class="product-introduce"><a href="#">智能道路监控系统智能道路监控系统</a></p>
+								</div>
+								
+								<div class="auction">
+									<p class="auction-price">起拍价<span>￥30</span></p>
+									<div class="count-down"></div>
+									<div class="auction-times">45次出价</div>
+								</div>
+							</li>
+							<li>
+								<div class="contain-img">
+									<img src="images/sources.png" />
+									<p class="product-introduce"><a href="#">智能道路监控系统智能道路监控系统</a></p>
+								</div>
+								
+								<div class="auction">
+									<p class="auction-price">起拍价<span>￥30</span></p>
+									<div class="count-down"></div>
+									<div class="auction-times">45次出价</div>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+					<div class="bioengineering"></div>
+					<div class="energy-environment"></div>
+					<div class="chemistry-chemical"></div>
+				</div>
+				<div class="paging clearfix">
+					<ul>
+						<li><a href="#"><i></i><span class="before">上一页</span></a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#"><span class="next">下一页</span><i></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer"></div>
+		</div>
+		<script type="text/javascript" src="lib/jquery-2.2.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.header').load('commonHeader.html');
+				$('.footer').load('commonFooter.html');
+				$('#mechano-electronic').click(function(){
+					$('.content-show div').each(function(){
+						$(this).css('display','none');
+					})
+					$('.mechano-electronic').css('display','block');
+					$('#slide-block').css('left','0');
+				});
+				$('#bioengineering').click(function(){
+					$('.content-show div').each(function(){
+						$(this).css('display','none');
+					})
+					$('.bioengineering').css('display','block');
+					$('#slide-block').css('left','250px');
+				});
+				$('#energy-environment').click(function(){
+					$('.content-show div').each(function(){
+						$(this).css('display','none');
+					})
+					$('.energy-environment').css('display','block');
+					$('#slide-block').css('left','500px');
+				});
+				$('#chemistry-chemical').click(function(){
+					$('.content-show div').each(function(){
+						$(this).css('display','none');
+					})
+					$('.chemistry-chemical').css('display','block');
+					$('#slide-block').css('left','750px');
+				});
+				var deadline=new Date(2017,6,22,0,0,0);
+			setInterval(function(){
+				var currentTime=new Date().getTime();
+				var timeInterval=deadline.getTime()-currentTime;
+				var remainTime=parseInt(timeInterval/1000);
+				var day=parseInt(remainTime/(3600*24));
+				var hour=parseInt((remainTime-day*3600*24)/3600);
+				var minute=parseInt((remainTime-day*24*3600-hour*3600)/60);
+				var second=parseInt(remainTime%60);
+				//当转换出来的为个位数时，给前面补零。
+				function addzeros(time){
+					if(time<10){
+						time='0'+time;
+						
+					}
+					return time;
+			}
+				$('.count-down').html('剩余时间'+addzeros(day)+'天'+addzeros(hour)+'时'+addzeros(minute)+'分'+addzeros(second)+'秒');
+			},1000)
+			})
+		</script>
+	</body>
+</html>

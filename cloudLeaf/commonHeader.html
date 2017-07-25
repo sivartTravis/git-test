@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>公共头部</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			a:link {
+				text-decoration: none;
+			}
+			a:visited {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			a:active {
+				text-decoration: none;
+				font-weight: bold;
+			}
+			body{
+				position: relative;
+			}
+			header{
+				width: 100%;
+				height: 100px;
+				position: absolute;
+				left: 50%;
+				transform:translateX(-50%);
+			}
+			.container{
+				background: #03050b;
+				height: 100px;
+			}
+			.loginOrRegister{
+				height: 25px;
+				text-align: right;
+				padding-top: 5px;
+				padding-right: 5px;
+			}
+			.loginOrRegister span{
+				color: white;
+			}
+			.loginOrRegister span a{
+				color:white;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			.loginOrRegister span a:hover{
+				color: #5498D9;
+			}
+			.header_session{
+				height: 60px;
+				width: 100%;
+				background: #0a131a;
+			}
+			.logo{
+				display: block;
+				float: left;
+				width: 104px;
+				height: 60px;
+				background: url(images/logo.png) no-repeat;
+			}
+			nav{
+				width: 800px;
+				height: 60px;
+				float: right;
+			}
+			nav ul{
+				height: 60px;
+			}
+			nav ul li{
+				float: left;
+				height: 60px;
+			}
+			nav ul li a{
+				display: block;
+				color: white;
+				height: 60px;
+				line-height: 60px;
+				padding:0 20px;
+				font-size: 16px;
+			}
+			nav ul li a:hover{
+				color: #5498d9;
+			}
+			.selected{
+				color: #5498d9;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="loginOrRegister">
+					<span><a href="loginOrRegister.html">请登录</a></span>
+					<span>|</span>
+					<span><a href="loginOrRegister.html">免费注册</a></span>
+				</div>
+				<div class="header_session">
+					<a href="#" alt="云叶" class="logo"></a>
+					<nav>
+						<ul id="navbar">
+							<li><a href="index.html">首页</a></li>
+							<li><a href="resources.html">资源平台</a></li>
+							<li><a href="demandPlatform.html">需求平台</a></li>
+							<li><a href="#">竞价拍卖</a></li>
+							<li><a href="#">关于云叶</a></li>
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+		</header>
+	</body>
+</html>

@@ -1,0 +1,141 @@
+.main{
+	width: 100%;
+}
+.header{
+	height: 100px;
+}
+.section{
+	height:870px;
+	background-color:#03050b;;
+	background: url(../images/bg-earth.jpg) 50% 50% no-repeat;
+	position: relative;
+}
+.tabs{
+	width: 358px;
+	height: 450px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.tabs h2{
+	color: white;
+	text-align: center;
+	line-height: 50px;
+}
+.tabs h2 span{
+	color: white;
+	cursor: pointer;
+}
+#login{
+	color: #5498D9;
+}
+.tabs h2 #login:hover{
+	color: #5498d9;
+}
+.tabs h2 #register:hover{
+	color: #5498d9;
+}
+.show-area{
+	width: 358px;
+	height: 450px;
+	position: relative;
+	overflow: hidden;
+}
+.re-log{
+	width: 716px;
+	height: 450px;
+	position: absolute;
+}
+.login-area{
+	width: 358px;
+	height: 450px;
+	float: left;
+}
+.register-area{
+	width: 358px;
+	height: 450px;
+	float: left;
+}
+#show-login{
+	padding: 20px;
+}
+#show-register{
+	padding:20px ;
+}
+input[type="text"],input[type="password"]{
+	border: none;
+	outline: medium;
+	color: white;
+	margin-top:50px ;
+	padding-bottom: 8px;
+	border-bottom: 1px solid white;
+	width: 300px;
+}
+.email{
+	background: url(../images/邮箱.png) no-repeat;
+	padding-left: 25px;
+}
+.password{
+	background: url(../images/密码.png) no-repeat;
+	padding-left: 25px;
+}
+.telephone{
+	background: url(../images/电话.png) no-repeat;
+	padding-left: 25px;
+}
+.sure-password{
+	background: url(../images/密码.png) no-repeat;
+	padding-left: 25px;
+}
+.radio{
+	text-align: center;
+}
+.radio label{
+	color: white;
+	line-height: 100px;
+	padding-right: 20px;
+}
+.radio i{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.checked{
+	background: url(../images/sure.png) no-repeat;
+}
+.checked-blue{
+	background: url(../images/sure-checked.png) no-repeat;
+}
+#agree{
+	line-height: 100px;
+	vertical-align:middle;
+	display: none;
+	
+	
+}
+.submit-btn{
+	width: 300px;
+	height:40px ;
+	line-height: 40px;
+	text-align: center;
+	background: #5498D9;
+	color: white;
+	border: none;
+	font-size: 16px;
+	
+}
+
+.forget{
+	line-height: 50px;
+	text-align: right;
+	color: white;
+}
+.forget a{
+	color: white;
+}
+.forget a:hover{
+	color:#5498d9;
+}

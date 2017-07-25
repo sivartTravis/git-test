@@ -1,0 +1,138 @@
+.main{
+	
+}
+.header{
+	width: 100%;
+	height: 100px;
+}
+.session{
+	
+}
+.banner{
+	height: 789px;
+	background: url(../images/banner.png) no-repeat 50% 50%;
+}
+.show-content{
+	height: 1069px;
+	background: url(../images/bg-index.png) repeat-x;
+}
+.show-contact{
+	height: 518px;
+	background: url(../images/footer-final.png) no-repeat;
+}
+.content{
+	width: 994px;
+	margin: 0 auto;
+	padding-top: 84px;
+}
+.textbox{
+	width: 404px;
+	height: 98px;
+	margin: 0 auto;
+	border: 2px solid #05060a;
+}
+.about-chinese{
+	text-align: center;
+	line-height: 200%;
+	font-weight: 600;
+}
+.about-english{
+	text-align: center;
+	font-size: 25px;
+	line-height: 200%;
+}
+.decrorate{
+	text-align: center;
+	font-size: 25px;
+}
+.introduce{
+	padding-top: 50px;
+	line-height: 150%;
+	text-align: center;
+	color: #aaaaaa;
+}
+.pic-show{
+	
+}
+.pic-show li{
+	float: left;
+	width: 321px;
+	margin-top: 65px;
+	margin-right: 15px;
+}
+.pic-show li:last-child{
+	margin-right: 0;
+}
+.pic-account{
+	width: 320px;
+	height: 146px;
+	background: #292d48;
+	padding: 40px;
+}
+.title{
+	text-align: center;
+	color: white;
+	font-size: 30px;
+}
+.subhead{
+	text-align: center;
+	color: white;
+	font-size: 12px;
+	padding-top: 15px;
+	
+}
+.contact-title{
+	padding-top: 35px;
+}
+.contact-title p{
+	color: #969fa8;
+	text-align: center;
+	line-height: 200%;
+}
+.contact-chinese{
+	font-size: 35px;
+}
+.contact-english{
+	font-size: 14px;
+}
+.contact-method{
+	width: 900px;
+	padding-top: 60px;
+	margin: 0 auto;
+}
+.contact-method li{
+	width: 90px;
+	float: left;
+	margin-right:130px;
+}
+.contact-method li:last-child{
+	margin-right:0;
+}
+.contact-method li a{
+	display: inline-block;
+}
+.contact-method li p{
+	text-align: center;
+}
+.chinese{
+	color: #8d99b1;
+	font-size: 20px;
+	line-height: 200%;
+}
+.english{
+	color: #8d99b1;
+	font-size: 10px;
+	line-height: 150%;
+}
+.show-contact .first-child{
+	margin-top: 30px;
+}
+.show-contact p{
+	color: #4f5160;
+	line-height: 180%;
+	text-align: center;
+}
+.footer{
+	width: 100%;
+	height: 140px;
+}

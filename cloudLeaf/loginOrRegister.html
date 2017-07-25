@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录&注册</title>
+		<link rel="stylesheet" href="lib/common.css" />
+		<link rel="stylesheet" href="css/loginOrRegister.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="header"></div>
+			<div class="section">
+				<div class="tabs">
+					<h2><span id="login">登录</span>或者<span id="register">注册</span></h2>
+					<div class="show-area">
+						<div class="re-log">
+							<div class="login-area">
+								<form id="show-login">
+									<input type="text" id="email" class="email" placeholder="工作邮箱"/>
+									<input type="password" id="password" class="password" placeholder="密码"/>
+									<div class="radio">
+										<label for="agree">同意网站声明条款</label>
+										<i id="log-checked" class="checked">
+											<input type="radio"  id="agree" name="agree-statement"/>
+										</i>
+									</div>
+									<input type="submit" value="登录" id="login-in" class="submit-btn"/>
+									<p class="forget">忘记密码？<a href="#">点击这里</a></p>
+								</form>
+							</div>
+							<div class="register-area">
+								<form id="show-register">
+									<input type="text" id="email" class="email" placeholder="工作邮箱"/>
+									<input type="text" id="telephone" class="telephone" placeholder="电话"/>
+									<input type="password" id="password" class="password" placeholder="密码"/>
+									<input type="password" id="sure-password" class="sure-password" placeholder="确认密码"/>
+									<div class="radio">
+										<label for="agree">同意网站声明条款</label>
+										<i id="reg-checked" class="checked">
+											<input type="radio"  id="agree" name="agree-statement"/>
+										</i>
+									</div>
+									<input type="submit" value="点我注册" id="register-in" class="submit-btn"/>
+									
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="lib/jquery-2.2.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.header').load('commonHeader.html');
+				$('#login').click(function(){
+					$('.re-log').css('left','0');
+					$(this).css('color','#5498D9');
+					$(this).siblings().css('color','white');
+				});
+				$('#register').click(function(){
+					$('.re-log').css('left','-358px');
+					$(this).css('color','#5498D9');
+					$(this).siblings().css('color','white');
+				});
+				$('#log-checked').click(function(){
+					$('#agree').prop('checked','checked');
+					$(this).removeClass('checked');
+					$(this).addClass('checked-blue');
+				});
+				$('#reg-checked').click(function(){
+					$('#agree').prop('checked','checked');
+					$(this).removeClass('checked');
+					$(this).addClass('checked-blue');
+				})
+			});
+		</script>
+	</body>
+</html>

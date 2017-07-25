@@ -1,0 +1,197 @@
+.main{
+	
+}
+.header{
+	width: 100%;
+	height: 100px;
+}
+.middle{
+	width: 1000px;
+	margin: 0 auto;
+	
+}
+.tabs{
+	width: 100%;
+}
+.tabs-list{
+	width: 100%;
+	position: relative;
+}
+.tabs-list li{
+	width: 250px;
+	height: 137px;
+	float: left;
+	border-bottom: 5px solid #ebeaf2;
+	cursor: pointer;
+}
+.tabs-list li+li{
+	border-left: 1px solid #ebeaf2;
+}
+.tabs-list li h2{
+	text-align: center;
+	line-height: 80px;
+}
+.tabs-list li p{
+	text-align: center;
+	line-height: 20px;
+}
+#slide-block{
+	position: absolute;
+	top: 132px;
+	left: 0;
+	height: 5px;
+	background: #292d46;
+	border: 0;
+}
+#mechano-electronic:hover~#slide-block{
+	transition: left 1s ease-in-out 0;
+}
+#bioengineering:hover~#slide-block{
+	left: 250px;
+	transition: 0.5s ease-in-out left;
+}
+#energy-environment:hover~#slide-block{
+	left: 500px;
+	transition: 0.5s ease-in-out left;
+}
+#chemistry-chemical:hover~#slide-block{
+	left: 750px;
+	transition: 0.5s ease-in-out left;
+}
+
+.content-show{
+	width: 1000px;
+	height: 800px;
+	position: relative;
+	
+}
+.content-show>div{
+	position: absolute;
+	width: 1000px;
+	
+}
+.product-list{
+	
+}
+.product-list li{
+	width: 493px;
+	height: 434px;
+	float: left;
+	
+	
+}
+.product-list li:nth-child(2n){
+	margin-left: 14px;
+}
+.contain-img{
+	position: relative;
+	width: 100%;
+	height: 343px;
+}
+.product-list li img{
+	
+}
+.product-introduce{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 493px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #3a3c51;
+	opacity: 0.7;
+		
+	
+}
+.product-introduce a{
+	color: white;
+	font-size:18px;
+	font-weight: bold;
+}
+.auction{
+	width: 493px;
+	height: 88px;
+	background: #f0eff7;
+	position: relative;
+	padding-top: 20px;
+}
+.auction-price{
+	color: #5b5b5d;
+	padding-left: 20px;
+	line-height: 200%;
+}
+.auction-price span{
+	font-size: 18px;
+	font-weight: bold;
+}
+.count-down{
+	padding-left: 20px;
+	line-height: 200%;
+	color: #5b5b5d;
+}
+.auction-times{
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	width:110px ;
+	height: 24px;
+	line-height:24px ;
+	background: #292d48;
+	text-align: center;
+	color: white;
+	font-weight:bold ;
+}
+/*.content-show div:not(.mechano-electronic){
+	display: none;
+}*/
+.paging{
+	margin-top: 20px;
+}
+.paging ul{
+	width: 500px;
+	height: 100px;
+	float: right;
+}
+.paging ul li{
+	float: left;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 10px;
+	border: 1px solid #000000;
+	text-align: center;
+}
+.paging ul li:nth-child(1){
+	width: 80px;
+}
+.paging ul li:nth-child(1) i{
+	display: inline-block;
+	background: url(../images/左.png) no-repeat center left;
+	width: 16px;
+	height: 18px;
+}
+.paging ul li:last-child{
+	width: 80px;
+}
+.before,.next{
+	display: inline-block;
+	line-height: 30px;
+}
+.paging ul li:last-child i{
+	display: inline-block;
+	width: 16px;
+	height: 18px;
+	background: url(../images/右.png) no-repeat 50% 50%;
+}
+.paging ul li a{
+	display: block;
+}
+.paging ul li a:hover{
+	background: #8D99B1;
+	color:white;
+}
+.footer{
+	width: 100%;
+	height: 140px;
+}
