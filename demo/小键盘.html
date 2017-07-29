@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>小键盘</title>
+<style type="text/css">
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;color:#000;}
+body{font-size:16px;font-family:Arial,Verdana,Tahoma,"微软雅黑","黑体";line-height:120%;background:#fff;margin:0;overflow-x:hidden;}
+p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,form,table{margin:0;padding:0;}
+a,img{border:none;}
+img{vertical-align:middle;border:0;}
+li{list-style:none;}
+i,em{font-style:normal;}
+a{text-decoration:none; color:#000000;border:0;}
+a:link{text-decoration:none; color:#000000;}
+a:hover{text-decoration:none; color:#000000;}
+a:visited{text-decoration:none; color:#000000;}
+a:active{text-decoration:none; color:#000000;}
+.clearfix:before,.clearfix:after{display:table;content:"";}
+.clearfix:after{clear:both;}
+.clearfix{*zoom:1} 
+.ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+body{background:#484a5f;}
+.keyboard{background:#484a5f;width:950px;position:relative;left:50%;margin-left:-365px;padding:50px 10px;}
+li{padding:15px 18px; margin:6px; border-radius:8px; border:1px #aaa solid; color:#aaa; float:left; font-size:18px; cursor:pointer;}
+li:active{ background-color:#1b1e39;}
+#ul2{padding-left:80px;}
+#ul3{padding-left:40px;}
+#ul4{padding-left:100px;}
+#text1{ width:500px; height:40px; line-height:40px; border-radius:8px; display:block; margin:0 auto; font-size:18px; padding:0 10px;}
+</style>
+</head>
+<body>
+<div class="keyboard">
+	<input type="text" id="text1" value=""/>
+	<ul id="ul1" class="clearfix"></ul>
+    <ul id="ul2" class="clearfix"></ul>
+    <ul id="ul3" class="clearfix"></ul>
+    <ul id="ul4" class="clearfix"></ul>
+</div>
+<script>
+	var aLi = document.getElementsByTagName('li');
+	var oText = document.getElementById('text1');
+	var oBtn = document.getElementById('btn1');
+	var aUl = document.getElementsByTagName('ul');
+		var arr1 = ['`','1','2','3','4','5','6','7','8','9','0','-','=','delete','q','w','e','r','t','y','u','i','o','p','[',']','caps','a','s','d','f','g','h','j','k','l',';','\'','\\','shift','z','x','c','v','b','n','m',',','.','\/'];
+		var arr2 = ['`','1','2','3','4','5','6','7','8','9','0','-','=','delete','Q','W','E','R','T','Y','U','I','O','P','[',']','caps','A','S','D','F','G','H','J','K','L',';','\'','\\','shift','Z','X','C','V','B','N','M',',','.','\/'];
+		var arr3 = ['~','!','@','#','$','%','^','&','*','(',')','_','+','delete','Q','W','E','R','T','Y','U','I','O','P','[',']','caps','A','S','D','F','G','H','J','K','L',':','\"','\|','shift','Z','X','C','V','B','N','M','<','>','\?'];
+	for(var i = 0;i<50;i++){
+		var oLi = document.createElement('li');
+		oLi.innerHTML = arr1[i];
+		if(i<13){
+			oLi.onclick = keyButton;
+			aUl[0].appendChild(oLi);
+		}else if(i==13){
+			oLi.onclick = keyDelete;
+			aUl[0].appendChild(oLi);
+		}else if(i<26){
+			oLi.onclick = keyButton;
+			aUl[1].appendChild(oLi);
+		}else if(i==26){
+			oLi.onclick = keyCaps;
+			aUl[2].appendChild(oLi);
+		}else if(i<39){
+			oLi.onclick = keyButton;
+			aUl[2].appendChild(oLi);
+		}else if(i==39){
+			oLi.onclick =keyShift;
+			aUl[3].appendChild(oLi);
+		}else{
+			oLi.onclick = keyButton;
+			aUl[3].appendChild(oLi);
+		}
+	}
+function keyButton(){
+	var innerT = this.innerHTML;
+	if(innerT == '&lt;'){
+		innerT = '<';
+	}else if(innerT == '&gt;'){
+		innerT = '>';
+	}else if(innerT == '&amp;'){
+		innerT = '&';
+	}
+	oText.value += innerT;
+}
+function keyDelete(){oText.value = oText.value.substring(0,oText.value.length-1);}
+
+var onOff1 = true;
+function keyCaps(){
+	if(onOff2){
+		for(var i=0;i<aLi.length;i++){
+			if(onOff1){
+				aLi[i].innerHTML = arr2[i];
+				aLi[26].style.backgroundColor = '#1b1e39';
+			}else{
+				aLi[i].innerHTML = arr1[i];
+				aLi[26].style.backgroundColor = 'transparent';
+			}
+		}
+		onOff1 = !onOff1;
+	}
+}
+var onOff2 = true;
+function keyShift(){
+	for(var i=0;i<aLi.length;i++){
+		if(onOff2){
+			aLi[i].innerHTML = arr3[i];
+			aLi[26].style.backgroundColor = '#1b1e39';
+			aLi[39].style.backgroundColor = '#1b1e39';
+		}else{
+			aLi[i].innerHTML = arr1[i];
+			aLi[26].style.backgroundColor = 'transparent';
+			aLi[39].style.backgroundColor = 'transparent';
+			onOff1=true;
+		}
+	}
+	onOff2 = !onOff2;
+}
+</script>
+</body>
+</html>

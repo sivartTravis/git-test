@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>magicline navigation</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			a{
+				text-decoration: none;
+			}
+			nav{
+				margin: 50px;
+				position: relative;
+			}
+			.clearfix:before,
+			.clearfix:after{
+				display:table;
+				content:"";
+			}
+			.clearfix:after{
+				clear:both;
+			}
+			.clearfix{
+				*zoom:1
+			} 
+			.magicline{
+				
+			}
+			.magicline li{
+				list-style: none;
+				float: left;
+				width: 180px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				background: lightblue;
+			}
+			.magicline .slidestoke{
+				position: absolute;
+				width: 180px;
+				height: 5px;
+				background: lightcoral;
+				margin-top: 2px;
+				top: 35px;
+				left: 0;
+			}
+			.nav-1:hover,
+			.nav-2:hover,
+			.nav-3:hover,
+			.nav-4:hover{
+				font-weight: bold;
+			}
+			.nav-1:hover~.slidestoke{
+				left: 0;
+			}
+			.nav-2:hover~.slidestoke{
+				left: 180px;
+			}
+			.nav-3:hover~.slidestoke{
+				left: 360px;
+			}
+			.nav-4:hover~.slidestoke{
+				left: 540px;
+			}
+			.show-area{
+				position: relative;
+			}
+			.show-area div{
+				width: 720px;
+				height: 400px;
+				background: lightblue;
+				position: absolute;
+				top: 5px;
+				left: 0;
+				z-index: 1;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul class="magicline clearfix">
+				<li class="nav-1"><a href="#">Navigation 1</a></li>
+				<li class="nav-2"><a href="#">Navigation 2</a></li>
+				<li class="nav-3"><a href="#">Navigation 3</a></li>
+				<li class="nav-4"><a href="#">Navigation 4</a></li>
+				<li class="slidestoke"></li>
+			</ul>
+			<div class="show-area">
+				<div id="show-area-1"><img src="image/images.jpg"/></div>
+				<div id="show-area-2"><img src="image/1.jpg"/></div>
+				<div id="show-area-3"><img src="image/下载 (1).jpg"/></div>
+				<div id="show-area-4"><img src="image/下载.jpg"/></div>
+			</div>
+		</nav>
+		<script type="text/javascript" src="jquery-2.2.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.nav-1').click(function(){
+					$('.show-area div').each(function(){
+						$(this).css('z-index',1);
+					})
+					$('#show-area-1').css('z-index',999);
+				});
+				$('.nav-2').click(function(){
+					$('.show-area div').each(function(){
+						$(this).css('z-index',1);
+					})
+					$('#show-area-2').css('z-index',999);
+				});
+				$('.nav-3').click(function(){
+					$('.show-area div').each(function(){
+						$(this).css('z-index',1);
+					})
+					$('#show-area-3').css('z-index',999);
+				});
+				$('.nav-4').click(function(){
+					$('.show-area div').each(function(){
+						$(this).css('z-index',1);
+					})
+					$('#show-area-4').css('z-index',999);
+				});
+			})
+		</script>
+	</body>
+</html>

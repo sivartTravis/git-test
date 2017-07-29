@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>选项卡demo</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.tab{
+				position: relative;
+				width:600px ;
+				height:290px ;
+				margin: 0 auto;
+				margin-top:20px ;
+			}
+			.tab-univer{
+				
+			}
+			.tab-head{
+				padding: 5px;
+				width: 140px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border: 1px solid #16A085;
+				border-width: 1px 1px 0;
+				border-radius: 5px 5px 0 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: lightgrey;
+				cursor: pointer;
+			}
+			.tab-content{
+				padding: 10px 20px;
+				background: lightgrey;
+				border: 1px solid #16A085;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				width: 100%;
+				height: 230px;
+				
+			}
+			#tab-1 .tab-head{
+				z-index: 3;
+			}
+			#tab-2 .tab-head{
+				z-index: 1;
+				left: 155px;
+			}
+			#tab-3 .tab-head{
+				z-index: 1;
+				left: 310px;
+			}
+			#tab-1 .tab-content{
+				z-index: 2;
+			}
+			#tab-1:hover h3,
+			#tab-2:hover h3,
+			#tab-3:hover h3,
+			#tab-1:focus h3,
+			#tab-2:focus h3,
+			#tab-3:focus h3,
+			#tab-1:active h3,
+			#tab-2:active h3,
+			#tab-3:active h3{
+				z-index: 4;
+			}
+			#tab-1:hover .tab-content,
+			#tab-2:hover .tab-content,
+			#tab-3:hover .tab-content,
+			#tab-1:focus .tab-content,
+			#tab-2:focus .tab-content,
+			#tab-3:focus .tab-content,
+			#tab-1:active .tab-content,
+			#tab-2:active .tab-content,
+			#tab-3:active .tab-content{
+				z-index: 3;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="tab">
+			<div id="tab-1" class="tab-univer">
+				<h3 class="tab-head">Tab 1</h3>
+				<div class="tab-content">tab 1 content</div>
+			</div>
+			<div id="tab-2" class="tab-univer">
+				<h3 class="tab-head">Tab 2</h3>
+				<div class="tab-content">tab 2 content</div>
+			</div>
+			<div id="tab-3" class="tab-univer">
+				<h3 class="tab-head">Tab 3</h3>
+				<div class="tab-content">tab 3 content</div>
+			</div>
+		</div>
+	</body>
+</html>
